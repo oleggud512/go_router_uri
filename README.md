@@ -1,4 +1,4 @@
-# flutter_go_router_util
+# go_router_uri
 
 ## Overview
 This utility provides a structured and type-safe way to define, register, and navigate app routes using [`go_router`](https://pub.dev/packages/go_router).  
@@ -147,10 +147,3 @@ automatically resolving all segments and parameters.
 ## 🛠️ TODOs / Future Improvements
 - **Remove dependency on `get_it`** to simplify setup and reduce external dependencies.  
 - **Eliminate the need to register `LeafSubPath` manually** each time — automate this registration in the base classes.
-
-
-## 📦 Package Description (for pubspec.yaml)
-
-**Description:**  
-Type-safe hierarchical route builder for Flutter’s `go_router`.  
-Provides a declarative way to define routes and navigate without hardcoded path strings.
