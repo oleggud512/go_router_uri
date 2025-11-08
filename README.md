@@ -1,18 +1,16 @@
 # flutter_go_router_util
 
 ## Overview
-
 This utility provides a structured and type-safe way to define, register, and navigate app routes using [`go_router`](https://pub.dev/packages/go_router).  
 It eliminates string-based route management by introducing hierarchical, composable route classes that mirror your app’s navigation tree.
 
 ---
 
 ## ✨ Key Features
-
-- **Type-safe route composition:** Build routes using nested `AppSubPath` classes instead of manual string concatenation.
-- **Centralized route registry:** Define all routes and parameters in one place (`AppUri`).
-- **Easy navigation:** Generate full paths programmatically (e.g., `AppUri.root.texts.textId('42').edit.path`).
-- **Predictable structure:** Your route definitions mirror your UI’s navigation hierarchy.
+- **Type-safe route composition:** Build routes using nested `AppSubPath` classes instead of manual string concatenation.  
+- **Centralized route registry:** Define all routes and parameters in one place (`AppUri`).  
+- **Easy navigation:** Generate full paths programmatically (e.g., `AppUri.root.texts.textId('42').edit.path`).  
+- **Predictable structure:** Your route definitions mirror your UI’s navigation hierarchy.  
 
 ---
 
@@ -54,7 +52,6 @@ class TextSubPath extends AppSubPath<TextSubPath> {
 ```
 
 This structure defines a nested hierarchy of routes such as:
-
 ```
 /texts
 /texts/add
@@ -128,23 +125,29 @@ context.go(
 ```
 
 This generates and navigates to:
-
 ```
 /texts/42/edit
 ```
-
 automatically resolving all segments and parameters.
 
 ---
 
 ## ⚙️ Benefits in Large Apps
-
-- **Refactoring safety:** Renaming or reordering routes doesn’t break navigation calls.
-- **Autocomplete support:** IDEs provide code completion for route segments.
-- **Parameter validation:** Parameters are typed and easy to track.
+- **Refactoring safety:** Renaming or reordering routes doesn’t break navigation calls.  
+- **Autocomplete support:** IDEs provide code completion for route segments.  
+- **Parameter validation:** Parameters are typed and easy to track.  
 - **Simplified deep linking:** Route trees reflect your URI structure directly.
 
 ---
+
+
+
+---
+
+## 🛠️ TODOs / Future Improvements
+- **Remove dependency on `get_it`** to simplify setup and reduce external dependencies.  
+- **Eliminate the need to register `LeafSubPath` manually** each time — automate this registration in the base classes.
+
 
 ## 📦 Package Description (for pubspec.yaml)
 
